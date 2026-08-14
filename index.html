@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garra Playeras</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/estilos.css" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark garra-navbar fixed-top">
+
+    <div class="container">
+
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img
+                src="img/Logo garra limpio-blanco.png"
+                alt="Garra"
+                class="navbar-logo" 
+            >
+        </a>
+ 
+        <!-- Botón móvil -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuGarra"
+            aria-controls="menuGarra"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú -->
+        <div class="collapse navbar-collapse" id="menuGarra">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="#index">
+                        INICIO
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#catalogo">
+                        CATÁLOGO
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#personaliza">
+                        PERSONALIZA
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#nosotros">
+                        NOSOTROS
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">
+                        CONTACTO
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Botón pedido -->
+            <a href="#personaliza" class="btn btn-navbar-garra">
+                HAZ TU PEDIDO
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+    <section class="hero-garra">
+        <div class="hero-decorations" aria-hidden="true">
+
+        <img
+            src="img/decoraciones/brochazo-rojo.png"
+            class="decoration brush-red"
+            alt=""
+        >
+
+        <img
+            src="img/decoraciones/brochazo-morado.png"
+            class="decoration brush-purple"
+            alt=""
+        >
+
+        <img
+            src="img/decoraciones/spray-rojo.png"
+            class="decoration spray-red"
+            alt=""
+        >
+
+        <img
+            src="img/decoraciones/halftone-morado.png"
+            class="decoration halftone-purple"
+            alt=""
+        >
+
+        <img
+            src="img/decoraciones/rayones-blancos.png"
+            class="decoration scratches-white"
+            alt=""
+        >
+
+        <img
+            src="img/decoraciones/rayo-rojo.png"
+            class="decoration lightning-red"
+            alt=""
+        >
+
+        <img
+            src="img/decoraciones/skyline.png"
+            class="decoration skyline"
+            alt=""
+        >
+
+        <img
+            src="img/decoraciones/garabato-morado.png"
+            class="decoration doodle-left"
+            alt=""
+        >
+
+    </div>
+        <div class="hero-overlay"></div>
+
+        <div class="container position-relative hero-content">
+            <div class="row min-vh-100 align-items-center">
+
+                <div class="col-lg-6">
+                    <p class="hero-small">RECUERDOS QUE VISTEN</p>
+                    <h1 class="hero-title">
+                    PONTE<br>
+                    TUS <br>
+                    MEJORES
+                    <span>GARRAS</span>
+                    </h1>
+                
+                    <p class="hero-description">
+                    Diseños que cuentan historias.<br>
+                    Hechos para dejar huella.
+                    </p>
+                
+                    <a href="#catalogo" class="btn btn-garra">
+                    VER CATÁLOGO
+                    </a>
+                </div>
+
+        <div class="col-lg-6 text-center">
+            <img
+            src="img/playera-garra.png"
+            alt="Playera Garra"
+            class="img-fluid hero-shirt">
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalogo-section" id="catalogo">
+
+    <div class="container">
+
+        <div class="catalogo-header">
+
+            <div>
+                <span class="catalogo-small">ELIGE TU ESTILO</span>
+
+                <h2 class="catalogo-title">
+                    NUESTRAS
+                    <span>GARRAS</span>
+                </h2>
+            </div>
+
+            <p class="catalogo-description">
+                Diseños creados para contar historias,
+                recordar momentos y llevar tu estilo a otro nivel.
+            </p>
+
+        </div>
+
+
+        <!-- FILTROS -->
+
+        <div class="catalogo-filtros">
+
+            <button class="filtro-btn active">
+                TODOS
+            </button>
+
+            <button class="filtro-btn">
+                RETRO
+            </button>
+
+            <button class="filtro-btn">
+                FRASES
+            </button>
+
+            <button class="filtro-btn">
+                URBANO
+            </button>
+
+            <button class="filtro-btn">
+                PERSONALIZADOS
+            </button>
+
+        </div>
+
+
+        <!-- PRODUCTOS -->
+
+        <div class="row g-4">
+
+            <!-- PRODUCTO 1 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <article class="producto-card">
+
+                    <div class="producto-image">
+
+                        <span class="producto-tag">
+                            NUEVO
+                        </span>
+
+                        <img
+                            src="img/productos/playera1.png"
+                            alt="Playera Garra"
+                        >
+
+                        <div class="producto-overlay">
+
+                            <button class="producto-ver">
+                                VER DISEÑO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="producto-category">
+                            GARRA
+                        </span>
+
+                        <h3>
+                            GARRA CLASSIC
+                        </h3>
+
+                        <div class="producto-bottom">
+
+                            <span class="producto-precio">
+                                $349 MXN
+                            </span>
+
+                            <button class="producto-plus">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 2 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <article class="producto-card">
+
+                    <div class="producto-image">
+
+                        <img
+                            src="img/productos/playera2.png"
+                            alt="Playera Hechos con valores"
+                        >
+
+                        <div class="producto-overlay">
+
+                            <button class="producto-ver">
+                                VER DISEÑO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="producto-category">
+                            FRASES
+                        </span>
+
+                        <h3>
+                            HECHOS CON VALORES
+                        </h3>
+
+                        <div class="producto-bottom">
+
+                            <span class="producto-precio">
+                                $349 MXN
+                            </span>
+
+                            <button class="producto-plus">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 3 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <article class="producto-card">
+
+                    <div class="producto-image">
+
+                        <img
+                            src="img/productos/playera3.png"
+                            alt="Playera Nostalgia"
+                        >
+
+                        <div class="producto-overlay">
+
+                            <button class="producto-ver">
+                                VER DISEÑO
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="producto-category">
+                            RETRO
+                        </span>
+
+                        <h3>
+                            NOSTALGIA
+                        </h3>
+
+                        <div class="producto-bottom">
+
+                            <span class="producto-precio">
+                                $349 MXN
+                            </span>
+
+                            <button class="producto-plus">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 4 -->
+
+            <div class="col-12 col-sm-6 col-lg-3">
+
+                <article class="producto-card producto-personalizado">
+
+                    <div class="producto-image">
+
+                        <span class="producto-tag personalizado">
+                            CREA LA TUYA
+                        </span>
+
+                        <img
+                            src="img/productos/playera4.png"
+                            alt="Playera personalizada"
+                        >
+
+                        <div class="producto-overlay">
+
+                            <button class="producto-ver">
+                                PERSONALIZAR
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="producto-info">
+
+                        <span class="producto-category">
+                            PERSONALIZADA
+                        </span>
+
+                        <h3>
+                            TU IDEA, TU GARRA
+                        </h3>
+
+                        <div class="producto-bottom">
+
+                            <span class="producto-precio">
+                                DESDE $299
+                            </span>
+
+                            <button class="producto-plus">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <script>const navbar = document.querySelector('.garra-navbar');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 40) {
+            navbar.classList.add('navbar-scroll');
+        } else {
+            navbar.classList.remove('navbar-scroll');}});</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
