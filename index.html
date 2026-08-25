@@ -242,7 +242,15 @@
 
                         <div class="producto-overlay">
 
-                            <button class="producto-ver">
+                            <button
+                                class="producto-ver"
+                                data-bs-toggle="modal"
+                                data-bs-target="#productoModal"
+                                data-nombre="GARRA CLASSIC"
+                                data-precio="$349 MXN"
+                                data-imagen="img/productos/playera1.png"
+                                data-categoria="GARRA"
+                                data-descripcion="Playera GARRA con diseño original, cómoda y pensada para acompañarte todos los días.">
                                 VER DISEÑO
                             </button>
 
@@ -294,7 +302,15 @@
 
                         <div class="producto-overlay">
 
-                            <button class="producto-ver">
+                            <button
+                                class="producto-ver"
+                                data-bs-toggle="modal"
+                                data-bs-target="#productoModal"
+                                data-nombre="HECHOS CON VALORES"
+                                data-precio="$349 MXN"
+                                data-imagen="img/productos/playera2.png"
+                                data-categoria="FRASES"
+                                data-descripcion="Diseño inspirado en esas palabras y valores que pasan de generación en generación.">
                                 VER DISEÑO
                             </button>
 
@@ -346,7 +362,15 @@
 
                         <div class="producto-overlay">
 
-                            <button class="producto-ver">
+                            <button
+                                class="producto-ver"
+                                data-bs-toggle="modal"
+                                data-bs-target="#productoModal"
+                                data-nombre="NOSTALGIA"
+                                data-precio="$349 MXN"
+                                data-imagen="img/productos/playera3.png"
+                                data-categoria="RETRO"
+                                data-descripcion="Una playera inspirada en recuerdos, épocas y detalles que siguen formando parte de nosotros.">
                                 VER DISEÑO
                             </button>
 
@@ -402,7 +426,15 @@
 
                         <div class="producto-overlay">
 
-                            <button class="producto-ver">
+                            <button
+                                class="producto-ver"
+                                data-bs-toggle="modal"
+                                data-bs-target="#productoModal"
+                                data-nombre="TU IDEA, TU GARRA"
+                                data-precio="DESDE $299"
+                                data-imagen="img/productos/playera4.png"
+                                data-categoria="PERSONALIZADA"
+                                data-descripcion="Cuéntanos tu idea y creamos una playera personalizada a tu estilo.">
                                 PERSONALIZAR
                             </button>
 
@@ -442,6 +474,140 @@
 
     </div>
 
+    <div
+    class="modal fade"
+    id="productoModal"
+    tabindex="-1"
+    aria-labelledby="productoModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+
+        <div class="modal-content modal-garra">
+            <button
+                type="button"
+                class="btn-close btn-close-white modal-close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar">
+            </button>
+
+            <div class="row g-0">
+                <!-- IMAGEN -->
+                <div class="col-lg-6">
+                    <div class="modal-product-image">
+                        <div class="modal-halftone"></div>
+                        <img
+                            src=""
+                            id="modalImagen"
+                            alt="">
+                    </div>
+
+                </div>
+
+
+                <!-- INFORMACIÓN -->
+
+                <div class="col-lg-6">
+
+                    <div class="modal-product-info">
+
+                        <span
+                            class="modal-category"
+                            id="modalCategoria">
+                        </span>
+                        <h2 id="modalNombre"></h2>
+                        <div
+                            class="modal-price"
+                            id="modalPrecio">
+                        </div>
+                        <p
+                            class="modal-description"
+                            id="modalDescripcion">
+                        </p>
+
+                        <!-- TALLAS -->
+
+                        <div class="producto-opcion">
+
+                            <span class="opcion-title">
+                                SELECCIONA TU TALLA
+                            </span>
+
+                            <div class="tallas">
+
+                                <button class="talla-btn">
+                                    S
+                                </button>
+
+                                <button class="talla-btn">
+                                    M
+                                </button>
+
+                                <button class="talla-btn">
+                                    L
+                                </button>
+
+                                <button class="talla-btn">
+                                    XL
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- COLOR -->
+
+                        <div class="producto-opcion">
+
+                            <span class="opcion-title">
+                                COLOR
+                            </span>
+
+                            <div class="colores">
+
+                                <button
+                                    class="color-btn color-black active"
+                                    aria-label="Negro"
+                                ></button>
+
+                                <button
+                                    class="color-btn color-white"
+                                    aria-label="Blanco"
+                                ></button>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="modal-order-btn">
+                            HACER PEDIDO
+                        </button>
+
+
+                        <div class="modal-benefits">
+
+                            <span>✓ Calidad premium</span>
+
+                            <span>✓ Estampado resistente</span>
+
+                            <span>✓ Atención personalizada</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
 </section>
     <script>const navbar = document.querySelector('.garra-navbar');
     window.addEventListener('scroll', function () {
@@ -468,6 +634,83 @@
                 }
             });
         });
+    });
+</script>
+<script>
+    const productoModal =
+        document.getElementById('productoModal');
+    productoModal.addEventListener(
+        'show.bs.modal',
+        function(event) {
+            const boton =
+                event.relatedTarget;
+            const nombre =
+                boton.getAttribute(
+                    'data-nombre'
+                );
+            const precio =
+                boton.getAttribute(
+                    'data-precio'
+                );
+            const imagen =
+                boton.getAttribute(
+                    'data-imagen'
+                );
+            const categoria =
+                boton.getAttribute(
+                    'data-categoria'
+                );
+            const descripcion =
+                boton.getAttribute(
+                    'data-descripcion'
+                );
+            document.getElementById(
+                'modalNombre'
+            ).textContent =
+                nombre;
+            document.getElementById(
+                'modalPrecio'
+            ).textContent =
+                precio;
+            document.getElementById(
+                'modalCategoria'
+            ).textContent =
+                categoria;
+            document.getElementById(
+                'modalDescripcion'
+            ).textContent =
+                descripcion;
+            document.getElementById(
+                'modalImagen'
+            ).src =
+                imagen;
+            document.getElementById(
+                'modalImagen'
+            ).alt =
+                nombre;
+        }
+    );
+</script>
+<script>
+    const tallas =
+        document.querySelectorAll(
+            '.talla-btn'
+        );
+    tallas.forEach(talla => {
+        talla.addEventListener(
+            'click',
+            function() {
+                tallas.forEach(
+                    boton =>
+                        boton.classList.remove(
+                            'active'
+                        )
+                );
+                this.classList.add(
+                    'active'
+                );
+            }
+        );
     });
 </script>
 </body>

@@ -1054,3 +1054,404 @@ CATALOGO
             .67rem;
     }
 }
+/* =====================================================
+   MODAL PRODUCTO
+===================================================== */
+
+.modal-garra {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    border-radius: 0;
+
+    background:
+        #080808;
+
+    color:
+        white;
+
+    box-shadow:
+        15px 15px 0
+        rgba(91,24,201,.35);
+}
+
+
+.modal-close {
+    position:
+        absolute;
+
+    z-index:
+        20;
+
+    top:
+        18px;
+
+    right:
+        18px;
+}
+
+
+/* IMAGEN */
+
+.modal-product-image {
+    position:
+        relative;
+
+    min-height:
+        620px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    overflow:
+        hidden;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(91,24,201,.22),
+            transparent 55%
+        ),
+        #050505;
+}
+
+
+.modal-product-image img {
+    position:
+        relative;
+
+    z-index:
+        4;
+
+    width:
+        88%;
+
+    max-height:
+        570px;
+
+    object-fit:
+        contain;
+
+    filter:
+        drop-shadow(
+            14px 18px 0
+            rgba(240,20,34,.20)
+        );
+}
+
+
+/* HALFTONE */
+
+.modal-halftone {
+    position:
+        absolute;
+
+    width:
+        500px;
+
+    height:
+        500px;
+
+    right:
+        -120px;
+
+    top:
+        -100px;
+
+    background-image:
+        radial-gradient(
+            var(--garra-red) 2px,
+            transparent 2px
+        );
+
+    background-size:
+        18px 18px;
+
+    opacity:
+        .25;
+}
+/*-----------------------Info modal---------------------------*/
+.modal-product-info {
+    padding:
+        65px 55px;
+}
+
+
+.modal-category {
+    display:
+        block;
+
+    margin-bottom:
+        15px;
+
+    color:
+        var(--garra-red);
+
+    font-size:
+        .7rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        3px;
+}
+
+
+.modal-product-info h2 {
+    margin-bottom:
+        15px;
+
+    font-size:
+        clamp(
+            2.5rem,
+            4vw,
+            4.5rem
+        );
+
+    font-weight:
+        950;
+
+    line-height:
+        .9;
+
+    letter-spacing:
+        -3px;
+
+    text-transform:
+        uppercase;
+}
+
+
+.modal-price {
+    margin-bottom:
+        25px;
+
+    color:
+        white;
+
+    font-size:
+        1.7rem;
+
+    font-weight:
+        900;
+}
+
+
+.modal-description {
+    max-width:
+        480px;
+
+    margin-bottom:
+        35px;
+
+    color:
+        #aaa;
+
+    line-height:
+        1.7;
+}
+/*-------------------------------tallas------------------------------*/
+.producto-opcion {
+    margin-bottom:
+        30px;
+}
+
+
+.opcion-title {
+    display:
+        block;
+
+    margin-bottom:
+        12px;
+
+    color:
+        #ccc;
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        2px;
+}
+
+
+.tallas {
+    display:
+        flex;
+
+    gap:
+        10px;
+}
+
+
+.talla-btn {
+    width:
+        50px;
+
+    height:
+        50px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.25);
+
+    background:
+        transparent;
+
+    color:
+        white;
+
+    font-weight:
+        900;
+
+    transition:
+        .2s;
+}
+
+
+.talla-btn:hover,
+.talla-btn.active {
+    border-color:
+        var(--garra-red);
+
+    background:
+        var(--garra-red);
+
+    color:
+        white;
+
+    box-shadow:
+        4px 4px 0
+        var(--garra-purple);
+}
+/*-----------------------------------colores---------------------------*/
+.colores {
+    display:
+        flex;
+
+    gap:
+        12px;
+}
+
+
+.color-btn {
+    width:
+        32px;
+
+    height:
+        32px;
+
+    border:
+        3px solid
+        transparent;
+
+    border-radius:
+        50%;
+}
+
+
+.color-black {
+    background:
+        #050505;
+
+    box-shadow:
+        0 0 0 1px
+        #555;
+}
+
+
+.color-white {
+    background:
+        white;
+}
+
+
+.color-btn.active {
+    border-color:
+        var(--garra-red);
+}
+/*---------------------------boton de pedido------------------------------------*/
+.modal-order-btn {
+    width:
+        100%;
+
+    margin-top:
+        10px;
+
+    padding:
+        17px;
+
+    border:
+        0;
+
+    background:
+        var(--garra-red);
+
+    color:
+        white;
+
+    font-size:
+        .9rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.5px;
+
+    box-shadow:
+        7px 7px 0
+        var(--garra-purple);
+
+    transition:
+        .25s;
+}
+
+
+.modal-order-btn:hover {
+    transform:
+        translate(
+            -3px,
+            -3px
+        );
+
+    box-shadow:
+        11px 11px 0
+        var(--garra-purple);
+}
+
+/*------------------------Beneficios------------------------------------*/
+.modal-benefits {
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        7px;
+
+    margin-top:
+        30px;
+
+    color:
+        #777;
+
+    font-size:
+        .75rem;
+}
