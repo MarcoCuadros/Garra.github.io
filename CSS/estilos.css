@@ -701,37 +701,27 @@ CATALOGO
 }
 
 .filtro-btn.active {
-    border-color:
-        var(--garra-red);
-
-    background:
-        var(--garra-red);
-
+    background: var(--garra-red);
     color: white;
-
+    border-color: var(--garra-red);
     box-shadow:
-        5px 5px 0
-        var(--garra-purple);
+        6px 6px 0 var(--garra-purple);
 }
 /*-------------------------TARJETAS------------------------------*/
 .producto-card {
     position: relative;
-
-    height: 100%;
-
+    /* height: 100%; */
+    min-height: 470px;
     overflow: hidden;
-
     background:
         linear-gradient(
             145deg,
             #111,
             #080808
         );
-
     border:
         1px solid
         rgba(255,255,255,.08);
-
     transition:
         transform .35s ease,
         border-color .35s ease,
@@ -740,8 +730,8 @@ CATALOGO
 
 .producto-card:hover {
     transform:
-        translateY(-10px)
-        rotate(-.5deg);
+        translateY(-8px)
+        rotate(-.4deg);
 
     border-color:
         rgba(240,20,34,.55);
@@ -753,8 +743,7 @@ CATALOGO
 /*-----------------------imgplayera-------------------*/
 .producto-image {
     position: relative;
-
-    height: 390px;
+    height: 320px;
 
     display: flex;
     align-items: center;
@@ -914,18 +903,14 @@ CATALOGO
 .producto-ver:hover {
     background:
         var(--garra-red);
-
     border-color:
         var(--garra-red);
 }
 /*----------------------infinferior----------------*/
 .producto-info {
     position: relative;
-
     z-index: 5;
-
-    padding:
-        22px;
+    padding:18px;
 }
 
 .producto-category {
