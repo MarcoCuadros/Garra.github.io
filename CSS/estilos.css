@@ -1388,6 +1388,297 @@ CATALOGO
     }
 
 }
+/* =====================================================
+   PROCESO GARRA
+===================================================== */
+
+.proceso-section {
+    position: relative;
+
+    padding: 120px 0;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #070707 0%,
+            #050505 100%
+        );
+}
+
+
+.proceso-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    left: -300px;
+    top: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(91,24,201,.20),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+
+.proceso-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -300px;
+    bottom: -200px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(240,20,34,.15),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+/*---------------------------------------------Encabezado-----------------------------------------------------*/
+.proceso-header {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    margin:
+        0 auto 70px;
+}
+
+
+.proceso-small {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #888;
+
+    font-size: .75rem;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+
+.proceso-title {
+    margin: 0;
+
+    color: white;
+
+    font-size:
+        clamp(3rem, 5vw, 5.5rem);
+
+    font-weight: 950;
+
+    line-height: .9;
+
+    letter-spacing: -4px;
+}
+
+
+.proceso-title span {
+    display: block;
+
+    color: var(--garra-red);
+
+    text-shadow:
+        4px 4px 0
+        var(--garra-purple);
+}
+/*-----------------------------------------Trajetas-----------------------------------*/
+.proceso-row {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.proceso-card {
+    position: relative;
+
+    height: 100%;
+
+    min-height: 320px;
+
+    padding:
+        35px 28px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.01)
+        );
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.proceso-card:hover {
+    transform:
+        translateY(-8px)
+        rotate(-.5deg);
+
+    border-color:
+        rgba(240,20,34,.5);
+
+    box-shadow:
+        8px 8px 0
+        rgba(91,24,201,.25);
+}
+/*-----------------------------------------numero grande de fondo-------------------------------------*/
+.proceso-number {
+    position: absolute;
+
+    top: 10px;
+    right: 18px;
+
+    color:
+        rgba(255,255,255,.035);
+
+    font-size: 5.8rem;
+
+    font-weight: 950;
+
+    line-height: 1;
+}
+/*----------------------------------------------icono---------------------------------------*/
+.proceso-icon {
+    position: relative;
+
+    z-index: 2;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        var(--garra-red);
+
+    color: white;
+
+    font-size: 1.8rem;
+
+    font-weight: 900;
+
+    transform:
+        rotate(-4deg);
+
+    box-shadow:
+        5px 5px 0
+        var(--garra-purple);
+}
+
+/*---------------------------------------------texto--------------------------------------------------*/
+.proceso-card h3 {
+    position: relative;
+
+    z-index: 2;
+
+    margin-bottom: 15px;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+.proceso-card p {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    color: #888;
+
+    font-size: .9rem;
+
+    line-height: 1.7;
+}
+/*---------------------------visuales en escritorio---------------------------*/
+@media (min-width: 992px) {
+
+    .proceso-card::after {
+        content: "→";
+
+        position: absolute;
+
+        right: -30px;
+        top: 50%;
+
+        transform:
+            translateY(-50%);
+
+        color:
+            rgba(240,20,34,.45);
+
+        font-size: 2rem;
+
+        font-weight: 900;
+
+        z-index: 10;
+    }
+
+    .proceso-row > div:last-child
+    .proceso-card::after {
+        display: none;
+    }
+
+}
+
+/*------------------------------para celular---------------------------------*/
+@media (max-width: 991px) {
+
+    .proceso-section {
+        padding: 80px 0;
+    }
+
+    .proceso-header {
+        margin-bottom: 50px;
+    }
+
+    .proceso-card {
+        min-height: 280px;
+    }
+
+}
 
 /* =====================================================
    MODAL PRODUCTO
