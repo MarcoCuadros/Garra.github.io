@@ -1055,6 +1055,341 @@ CATALOGO
     }
 }
 /* =====================================================
+   PERSONALIZA TU GARRA
+===================================================== */
+
+.personaliza-section {
+    position: relative;
+
+    padding: 120px 0;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(91,24,201,.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #050505 0%,
+            #09030f 55%,
+            #050505 100%
+        );
+}
+
+.personaliza-section::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    opacity: .15;
+
+    background-image:
+        radial-gradient(
+            rgba(240,20,34,.8) 1.5px,
+            transparent 1.5px
+        );
+
+    background-size: 22px 22px;
+
+    mask-image:
+        linear-gradient(
+            90deg,
+            transparent,
+            black 65%,
+            black
+        );
+
+    pointer-events: none;
+}
+.personaliza-small {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #aaa;
+
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.personaliza-title {
+    margin-bottom: 30px;
+
+    color: white;
+
+    font-size: clamp(3.8rem, 6vw, 7rem);
+
+    font-weight: 950;
+
+    line-height: .85;
+
+    letter-spacing: -5px;
+
+    transform: rotate(-1deg);
+}
+
+.personaliza-title span {
+    display: block;
+
+    color: var(--garra-red);
+
+    text-shadow:
+        5px 5px 0 var(--garra-purple);
+}
+
+.personaliza-text {
+    max-width: 480px;
+
+    margin-bottom: 35px;
+
+    color: #aaa;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+/*------------------------------pasos----------------------------------*/
+.personaliza-points {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+}
+
+.personaliza-point {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.personaliza-point span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 42px;
+    height: 42px;
+
+    background: var(--garra-purple);
+
+    color: white;
+
+    font-size: .72rem;
+    font-weight: 900;
+
+    transform: rotate(-3deg);
+}
+
+.personaliza-point p {
+    margin: 0;
+
+    color: #ddd;
+
+    font-size: .95rem;
+}
+
+/*------------------------------------el boton-------------------------------------*/
+.btn-personaliza {
+    padding: 17px 30px;
+
+    border: 0;
+
+    background: var(--garra-red);
+
+    color: white;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    transform: skew(-5deg);
+
+    box-shadow:
+        8px 8px 0 var(--garra-purple);
+
+    transition: .25s;
+}
+
+.btn-personaliza:hover {
+    transform:
+        skew(-5deg)
+        translate(-3px, -3px);
+
+    box-shadow:
+        12px 12px 0 var(--garra-purple);
+}
+
+/*------------------------------------partevisual----------------------------*/
+.personaliza-visual {
+    position: relative;
+
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personaliza-decoration {
+    position: absolute;
+
+    width: 520px;
+    height: 300px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--garra-purple),
+            transparent 65%
+        );
+
+    clip-path:
+        polygon(
+            0 25%,
+            70% 0,
+            100% 30%,
+            65% 55%,
+            100% 80%,
+            25% 100%
+        );
+
+    opacity: .35;
+
+    transform: rotate(-8deg);
+}
+
+.personaliza-shirt {
+    position: relative;
+
+    z-index: 3;
+
+    width: min(100%, 560px);
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            15px 15px 0
+            rgba(240,20,34,.20)
+        )
+        drop-shadow(
+            -12px -8px 0
+            rgba(91,24,201,.23)
+        );
+}
+
+/*--------------------------------------llamados alrededor de la playera ---------------------------------*/
+.personaliza-callout {
+    position: absolute;
+
+    z-index: 5;
+
+    padding: 8px 14px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.25);
+
+    background:
+        rgba(0,0,0,.80);
+
+    color: white;
+
+    font-size: .7rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.callout-name {
+    top: 17%;
+    right: 4%;
+
+    transform: rotate(5deg);
+}
+
+.callout-design {
+    bottom: 18%;
+    right: 8%;
+
+    transform: rotate(-4deg);
+}
+
+.personaliza-number {
+    position: absolute;
+
+    z-index: 4;
+
+    right: 7%;
+    top: 38%;
+
+    color: rgba(255,255,255,.08);
+
+    font-size: 8rem;
+
+    font-weight: 950;
+
+    line-height: 1;
+}
+
+/*-------------------------------------ajuste para celular ----------------------------------*/
+@media (max-width: 991px) {
+
+    .personaliza-section {
+        padding: 80px 0;
+    }
+
+    .personaliza-visual {
+        min-height: 500px;
+
+        margin-top: 30px;
+    }
+
+    .personaliza-title {
+        font-size: clamp(3.5rem, 13vw, 5.5rem);
+    }
+
+    .personaliza-decoration {
+        width: 420px;
+    }
+
+    .personaliza-shirt {
+        width: 430px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .personaliza-visual {
+        min-height: 400px;
+    }
+
+    .personaliza-shirt {
+        width: 320px;
+    }
+
+    .personaliza-callout {
+        font-size: .6rem;
+    }
+
+    .personaliza-number {
+        font-size: 5rem;
+    }
+
+}
+
+/* =====================================================
    MODAL PRODUCTO
 ===================================================== */
 
