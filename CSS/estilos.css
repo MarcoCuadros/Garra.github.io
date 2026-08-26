@@ -2087,3 +2087,275 @@ CATALOGO
     font-size:
         .75rem;
 }
+/* =====================================================
+   GALERÍA GARRA
+===================================================== */
+
+.galeria-section {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(91,24,201,.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(240,20,34,.10),
+            transparent 28%
+        ),
+        #050505;
+}
+
+.galeria-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 40px;
+
+    margin-bottom: 55px;
+}
+
+.galeria-small {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #888;
+
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.galeria-title {
+    margin: 0;
+
+    color: white;
+
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 950;
+
+    line-height: .88;
+
+    letter-spacing: -4px;
+}
+
+.galeria-title span {
+    display: block;
+
+    color: var(--garra-red);
+
+    text-shadow:
+        4px 4px 0
+        var(--garra-purple);
+}
+
+.galeria-description {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: #888;
+
+    line-height: 1.7;
+}
+/*----------------------------para las imagenes--------------------*/
+.galeria-item {
+    position: relative;
+
+    height: 280px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.galeria-grande {
+    height: 420px;
+}
+
+.galeria-wide {
+    height: 300px;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+        grayscale(15%)
+        contrast(1.08);
+
+    transition:
+        transform .5s ease,
+        filter .5s ease;
+}
+
+.galeria-item:hover {
+    transform:
+        translateY(-6px)
+        rotate(-.4deg);
+
+    border-color:
+        rgba(240,20,34,.55);
+
+    box-shadow:
+        8px 8px 0
+        rgba(91,24,201,.30);
+}
+
+.galeria-item:hover img {
+    transform: scale(1.07);
+
+    filter:
+        grayscale(0%)
+        contrast(1.1);
+}
+
+/*---------------------para el overlay----------------------*/
+.galeria-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 35%,
+            rgba(0,0,0,.92)
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity .3s ease;
+}
+
+.galeria-item:hover .galeria-overlay {
+    opacity: 1;
+}
+
+.galeria-overlay span {
+    margin-bottom: 7px;
+
+    color:
+        var(--garra-red);
+
+    font-size: .68rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.galeria-overlay p {
+    margin: 0;
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 900;
+}
+
+/*-------------------------parte inferior-----------------*/
+.galeria-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 55px;
+
+    color: #777;
+
+    font-size: .75rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.galeria-instagram {
+    color:
+        var(--garra-red);
+
+    font-size: 1rem;
+
+    text-decoration: none;
+
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+.galeria-instagram:hover {
+    color: white;
+
+    transform:
+        rotate(-2deg)
+        scale(1.05);
+}
+/*---------------------para celular--------------------------*/
+@media (max-width: 991px) {
+
+    .galeria-section {
+        padding: 80px 0;
+    }
+
+    .galeria-header {
+        display: block;
+    }
+
+    .galeria-description {
+        margin-top: 25px;
+    }
+
+    .galeria-grande,
+    .galeria-wide,
+    .galeria-item {
+        height: 320px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .galeria-title {
+        font-size: 3.3rem;
+    }
+
+    .galeria-item,
+    .galeria-grande,
+    .galeria-wide {
+        height: 260px;
+    }
+
+    .galeria-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
