@@ -535,19 +535,19 @@
 
                             <div class="tallas">
 
-                                <button class="talla-btn">
+                                <button class="talla-btn" data-talla="S">
                                     S
                                 </button>
 
-                                <button class="talla-btn">
+                                <button class="talla-btn" data-talla="M">
                                     M
                                 </button>
 
-                                <button class="talla-btn">
+                                <button class="talla-btn" data-talla="L">
                                     L
                                 </button>
 
-                                <button class="talla-btn">
+                                <button class="talla-btn" data-talla="XL">
                                     XL
                                 </button>
 
@@ -568,11 +568,13 @@
 
                                 <button
                                     class="color-btn color-black active"
+                                    data-color="Negro"
                                     aria-label="Negro"
                                 ></button>
 
                                 <button
                                     class="color-btn color-white"
+                                    data-color="Blanco"
                                     aria-label="Blanco"
                                 ></button>
 
@@ -581,7 +583,7 @@
                         </div>
 
 
-                        <button class="modal-order-btn">
+                        <button class="modal-order-btn" id="btnPedidoWhatsApp">
                             HACER PEDIDO
                         </button>
 
@@ -688,8 +690,18 @@
                 'modalImagen'
             ).alt =
                 nombre;
+            document.querySelectorAll('.talla-btn')
+            .forEach(btn =>
+            btn.classList.remove('active')
+            );
+            document.querySelectorAll('.color-btn')
+            .forEach(btn =>
+            btn.classList.remove('active')
+            );
+            document.querySelector('.color-black')
+            .classList.add('active');
         }
-    );
+        );
 </script>
 <script>
     const tallas =
@@ -710,6 +722,62 @@
                     'active'
                 );
             }
+        );
+    });
+</script>
+<script>
+    const colores =
+        document.querySelectorAll('.color-btn');
+    colores.forEach(color => {
+        color.addEventListener('click', function() {
+            colores.forEach(btn =>
+                btn.classList.remove('active')
+            );
+            this.classList.add('active');
+        });
+    });
+</script>
+<script>
+    const btnPedidoWhatsApp =
+        document.getElementById('btnPedidoWhatsApp');
+    btnPedidoWhatsApp.addEventListener('click', function() {
+        const nombre =
+            document.getElementById('modalNombre').textContent;
+        const precio =
+            document.getElementById('modalPrecio').textContent;
+        const tallaSeleccionada =
+            document.querySelector('.talla-btn.active');
+        const colorSeleccionado =
+            document.querySelector('.color-btn.active');
+        if (!tallaSeleccionada) {
+            alert('Selecciona una talla');
+            return;
+        }
+        if (!colorSeleccionado) {
+            alert('Selecciona un color');
+            return;
+        }
+        const talla =
+            tallaSeleccionada.dataset.talla;
+        const color =
+            colorSeleccionado.dataset.color;
+        const mensaje = `
+Hola, quiero hacer un pedido en GARRA.
+Producto: ${nombre}
+Precio: ${precio}
+Talla: ${talla}
+Color: ${color}
+¿Me puedes ayudar con mi pedido?
+        `;
+        const mensajeCodificado =
+            encodeURIComponent(mensaje);
+        const telefono =
+            '527122970312';
+        const url =
+            `https://wa.me/${telefono}?text=${mensajeCodificado}`;
+        window.open(
+            url,
+            '_blank'
         );
     });
 </script>

@@ -1338,6 +1338,8 @@ CATALOGO
     box-shadow:
         4px 4px 0
         var(--garra-purple);
+    transform:
+        translate(-2px,-2px);
 }
 /*-----------------------------------colores---------------------------*/
 .colores {
@@ -1382,8 +1384,11 @@ CATALOGO
 
 
 .color-btn.active {
-    border-color:
-        var(--garra-red);
+    transform: scale(1.12);
+    outline:
+        2px solid var(--garra-red);
+    outline-offset:
+        4px;
 }
 /*---------------------------boton de pedido------------------------------------*/
 .modal-order-btn {
