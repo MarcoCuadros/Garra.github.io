@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>bootstrap con Marcoweb</title>
+</head>
+<body>
+    <h1>Aprendiendo bootstrap con Marcoweb</h1>
+    <h2>vamos a utilizar esta herramienta para diseñar</h2>
+
+    <div class="container-fluid"> <!--el container ya es una caja centrada en bootstrap-->
+        <!--12 columnas es el ancho máximo de la caja-->
+        <!--definir una fila-->
+        <!--fluid lo que hace es que la caja se extienda al ancho completo del contenedor-->
+        <div class="row">
+            <header class="col-12 bg-primary text-white p-2">
+                <h1>aprendiendo bootstrap con Marcoweb</h1>
+            </header>
+
+            <nav id="menu" class="col-12 bg-secondary text-white">
+                <ul class="row w-50">
+                    <li class="col">Inicio</li>
+                    <li class="col">Plantilla 1</li>
+                    <li class="col">Plantilla 2</li>
+                    <li class="col">Plantilla 3</li>
+                    <li class="col">Contactanos</li>
+                </ul>
+            </nav>
+
+            <section class="col-12">
+                <div class="row">
+                    <section class="col-9 border">
+                        <h2>Cajas</h2>
+                        <hr>
+                        <div class="row">
+                            <div class="col bg-primary m-2">
+                                caja1
+                            </div>
+                            <div class="col bg-warning m-2">
+                                caja2
+                            </div>
+                            <div class="col bg-danger m-2">
+                                caja3
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="item col col-lg col-md-12 col-sm-12 col-12 bg-primary"> 
+                                <!--lg, md, sm, xs son medidas para diferentes tamaños de pantalla sirve para el responsive-->
+                                Item1
+                            </div>
+                            <div class="item col col-lg col-md-6 col-sm-12 col-6 bg-warning">
+                                Item2
+                            </div>
+                            <div class="item col col-lg col-md-6 col-sm-12 col-6 bg-danger">
+                                Item3
+                            </div>
+                        </div>
+                    </section>
+
+                    <aside class="col-3 border">
+                        <h2>Barra lateral</h2>
+                        <div class="lateral row bg-light">
+                            <div class="late col-4 bg-primary">
+                                Numero1
+                            </div>
+                            <div class="late col-4 bg-success">
+                                Numero2
+                            </div>
+                            <div class="late col-4 bg-warning">
+                                Numero3
+                            </div>
+                            <div class="late col-4 bg-primary">
+                                Numero4
+                            </div>
+                            <div class="late col-4 bg-success">
+                                Numero5
+                            </div>
+                            <div class="late col-4 bg-warning">
+                                Numero6
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!--Justify-content-start se alinea hacia la izquierda
+                    center al centro y end al final tambien se puede poner between y around-->
+                    <div class="row mt-5 justify-content-center">
+                        <!--col-3 que va a tener un ancho de 16px mas o menos-->
+                        <div class="item col-3 bg-primary m-2">
+                            ProductoA
+                        </div>
+                        <div class="item col-3 bg-warning m-2">
+                            ProductoB
+                        </div>
+                    </div>
+
+                        <div class="row">
+                            <div class="item col-3 bg-primary">
+                                Elemento1
+                            </div>
+                            <div class="item col-3 bg-warning">
+                                Elemento2
+                            </div>
+                            <div class="item col-3 bg-danger">
+                                Elemento3
+                            </div>
+                            <div class="item col-2 bg-danger offset-1">
+                                <!--offset-1 es para dar espacio entre el elemento y el elemento anterior-->
+                                Elemento4
+                            </div>
+                        </div>
+                </div>
+            </section>
+
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="jquery/jquery-4.0.0.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

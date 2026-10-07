@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--UTF-8 es para indicar el conjunto de caracteres que se va a utilizar Es un conjunto de caracteres universal -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- viewport es para indicar a los navegadores cómo deben mostrar la página en dispositivos móviles, width=device-width es para indicar que el ancho de la página debe ser igual al ancho del dispositivo, initial-scale=1.0 es para indicar que el zoom inicial debe ser 1 -->
+    <meta name="description" content="Diseño, desarrollo y mantenimiento de sitios web"> <!-- content ayuda a los motores de búsqueda a entender el contenido de la página -->
+    <link rel="stylesheet" type="text/css" href="estilos.css"> <!-- link es para enlazar un archivo externo, rel es para indicar la relación entre el documento y el archivo, href es para indicar la ruta del archivo -->
+    <link rel="shortcut icon" type="image/x-icon" href="logo/naruto_japanese_cuisine_japan_ramen_japanese_food_icon_190977.ico"> <!-- link es para enlazar un archivo externo, rel es para indicar la relación entre el documento y el archivo, type es para indicar el tipo de archivo, href es para indicar la ruta del archivo -->
+    <title>Document</title>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header> <!--es para para que nos busque mas rapido el navegador -->
+        <div>
+            <img src="img/naruto.jpg" width="70" alt="Logotipo de Marco"> <!-- img es para insertar una imagen, src es para indicar la ruta de la imagen, width es para indicar el ancho de la imagen, alt es para indicar el texto alternativo -->
+
+        </div>
+
+        <nav> <!-- nav es para crear un menú de navegación -->
+            <ul>
+                <li><a href="#">Inicio</a></li> <!-- a es para crear un enlace, href es para indicar la ruta del enlace -->
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Portafolio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- Contenido secundario -->
+
+    <section class="wrapper"> <!-- es para dividir el contenido en secciones wrapper es un contenedor y le decimos cuantas secciones mas queremos -->
+
+        <section class="main"> <!-- main es para el contenido principal -->
+            <article>
+                <h2>Diseño, desarrollo y mantenimiento de sitios web</h2> <!-- h2 porque el h1 solo se usa una vez por página  -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Doloribus, voluptate. Voluptas, doloremque. Doloribus </p> <!-- p es para los párrafos -->
+            </article> <!-- article es para el contenido relacionado con el tema principal -->
+
+            <article>
+                <h2>Diseño, desarrollo y mantenimiento de sitios web</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Doloribus, voluptate. Voluptas, doloremque. Doloribus </p>
+            </article>
+        </section>
+
+        <aside> <!-- aside es para el contenido relacionado pero no es el tema principal -->
+            <h3>Noticias</h3> <!-- h3 porque el h2 ya se uso para el título principal -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, doloremque. Doloribus, voluptate. Voluptas, doloremque. Doloribus </p>
+            <p>  Muy sencillo <i>muy barato</i> <!--i es para poner las letras como italica--> que si ya queremos algo
+            mas avanzado entonces si podremos <b>obtar por algo mas caro</b> <!--b es para poner las letras como negrita-->
+        .muy sencillo <br/> <!--br es para hacer un salto de línea--> a un precio muy barato, que si ya queremos algo
+        mas avanzado entonces <!-- <strong> tambien permite poner en negrita es mas eficaz si el usuario necesita que el navegador lo busque --> 
+            si podremos <span>obtar</span> por algo mas caro <!--span es para resaltar un texto -->
+        </p>
+        </aside>
+    </section>
+
+    <footer> <!-- es para el pie de pagina -->  
+        <p> Marco - carrera de desarrollo web</p>
+    </footer> 
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get"> <!-- action es para indicar a donde se va a enviar el formulario, method es para indicar el metodo de envio -->
+        <label for="nombre">Nombre:</label> <!-- label es para indicar el nombre del campo, for es para indicar a que campo se refiere -->
+        <input type="text" placeholder="Ingrese su nombre" maxlength="30" minlength="2" id="nombre" name="nombre"><br><br>
+         <!-- input es para crear un campo de texto, type es para indicar el tipo de campo, 
+         placeholder es para indicar un texto de ejemplo, maxlength es para indicar la cantidad 
+         maxima de caracteres, minlength es para indicar la cantidad minima de caracteres, id es 
+         para identificar el campo que es el que se usa en el For, name es para indicar el nombre 
+         del campo que es el que se usapara enviar los datos -->
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password"><br><br> 
+        
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero"> <!-- select es para crear un campo de selección, id es para identificar el campo, name es para indicar el nombre del campo -->
+            <option value="masculino">Masculino</option> <!-- option es para crear una opción dentro del select, value es para indicar el valor que se va a enviar -->
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+        </select><br><br>
+        <input type="checkbox" id="terminos" name="terminos"> <!-- checkbox es para crear un campo de selección múltiple, id es para identificar el campo, name es para indicar el nombre del campo -->
+        <label for="terminos">Acepto los términos y condiciones</label><br><br>
+
+        <select id="hobbies" name="hobbies" multiple> <!-- select es para crear un campo de selección, id es para identificar el campo, name es para indicar el nombre del campo, multiple es para indicar que se pueden seleccionar varias opciones -->
+            <option value="deporte">Deporte</option>
+            <option value="musica">Música</option>
+            <option value="lectura">Lectura</option>
+            <option value="viajar">Viajar</option>
+        </select><br><br>
+        <input type="submit" value="Enviar">    
+    </form>
+</body>
+</html>

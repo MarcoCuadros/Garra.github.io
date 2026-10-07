@@ -1,0 +1,182 @@
+#boton {
+    display: block;
+    width: 200px;
+    padding: 15px;
+    border: 1px solid #000;
+    background-color: #eee;
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red;
+}
+
+#boton:hover {
+    background-color: steelblue;
+    width: 400px;
+    color: #fff;
+    transition: all 0.5s ease-in-out; /*Transición de todos los elementos, con una duración de 0.5 segundos y un efecto de ease-in-out que acelera poco a poco */
+}
+#caja {
+    width: 200px;
+    height: 200px;
+    background: tomato;
+    clip-path: circle(50% at top left);/* clip-path: circle(50% at center); crea una forma circular con un radio del 50% del tamaño del elemento */
+    transition-property: clip-path; /* Especifica que la transición se aplicará a la propiedad clip-path */
+    transition-duration: 2s; /* Especifica la duración de la transición */
+    transition-timing-function: ease-in-out; /* Especifica la función de temporización de la transición */
+    transition-delay: 1s; /* Especifica un retraso antes de que comience la transición */
+}
+.container:hover #caja {
+    clip-path: circle(150% at top left); /* Cambia la forma del clip-path al pasar el mouse sobre el contenedor */
+}
+/*Animaciones*/
+
+#caja2{
+    margin-top: 250px;
+    width: 250px;
+    height: 250px;
+    background: lightseagreen;
+    color: white;
+    border: 5px solid black;
+    font-size: 20px;
+    text-align: center;
+    line-height: 200px;
+    animation-name: Desplazamiento; /* Nombre de la animación */
+    animation-duration: 10s; /* Duración de la animación */
+    animation-iteration-count: infinite; /* La animación se repetirá infinitamente */
+    animation-timing-function: linear; /* La animación se ejecutará a una velocidad constante */
+}
+
+/*PARA HACER UNA ANIMACION PRIMERO DEFINOLOS @KEYFRAMES*/
+
+/*MANERA CORTA DE HACERLO*/
+
+/*Le pongo nombre desplazamiento*/
+/*le pongo como empieza y como termina con from y to*/
+/*@keyframes Desplazamiento{
+    from{
+        margin-left: 0px;
+    }
+    to{
+        margin-left: 1200px;
+    }
+}*/
+
+/*MANERA COMPLETA*/
+
+/*Lo dsplazo lado a la a la caja*/
+
+/*@keyframes Desplazamiento{
+    0%{
+        margin-left: 0px;
+    }
+    25%{
+        margin-left: 400px;
+    }
+    50%{
+        margin-left: 800px;
+    }
+    75%{
+        margin-left: 1200px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}*/
+
+/*Aca la hago rotar 
+(Deg se refiere a grados, especifica angulos de rotacion)*/
+
+/*@keyframes Desplazamiento{
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+    25%{
+        margin-left: 400px;
+        transform: rotate(120deg);
+    }
+    50%{
+        margin-left: 800px;
+        transform: rotate(240deg);
+    }
+    75%{
+        margin-left: 1200px;
+        transform: rotate(360deg);
+    }
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+}*/
+
+/*La hago rotar y se va conbirtiendo en pelota*/
+
+/*@keyframes Desplazamiento{
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+    }
+    25%{
+        margin-left: 400px;
+        transform: rotate(120deg);
+        border-radius: 100px;
+    }
+    50%{
+        margin-left: 800px;
+        transform: rotate(240deg);
+        border-radius: 333px;
+    }
+    75%{
+        margin-left: 1200px;
+        transform: rotate(360deg);
+        border-radius: 666px;
+    }
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+        border-radius: 0px;
+    }
+}*/
+
+/*La hago rotar y se va convirtiendo en pelota
+y cambia de color y cambia el borde*/
+
+@keyframes Desplazamiento{
+    0%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+        border-radius: 0px;
+        background-color: lightseagreen;
+        border: 5px solid black;
+    }
+    25%{
+        margin-left: 400px;
+        transform: rotate(120deg);
+        border-radius: 100px;
+        background-color: yellow;
+        border: 5px solid red;
+    }
+    50%{
+        margin-left: 800px;
+        transform: rotate(240deg);
+        border-radius: 333px;
+        background-color: blueviolet;
+        border: 5px dashed green;
+    }
+    75%{
+        margin-left: 1200px;
+        transform: rotate(360deg);
+        border-radius: 666px;
+        background-color: orange;
+        border: 5px dashed purple;
+    }
+    100%{
+        margin-left: 0px;
+        transform: rotate(0deg);
+        border-radius: 0px;
+        background-color: lightseagreen;
+        border: 5px solid black;
+    }
+}

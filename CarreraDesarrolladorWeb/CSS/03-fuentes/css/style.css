@@ -1,0 +1,33 @@
+
+@font-face {
+    font-family:BungeeShade;
+    src: url(../font/BungeeShade/Bungee_Shade/BungeeShade-Regular.ttf);
+}
+@font-face {
+    font-family: GravitasOne;
+    src: url(../font/GravitasOne/Gravitas_One/GravitasOne-Regular.ttf);
+}
+@font-face {
+    font-family: Lobster;
+    src: url(../font/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+h1 {
+    font-family: BungeeShade, "comic Sans MS";
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 45px;
+    color: red;
+}
+
+h3 {
+    font-family: GravitasOne, "comic Sans MS";
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+p {
+    font-family: Lobster, "comic Sans MS";
+    font-size: 20px;
+    font-weight: bold;
+}

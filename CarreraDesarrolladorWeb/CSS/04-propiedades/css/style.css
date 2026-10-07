@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    box-sizing: content-box; /* content-box es el valor por defecto, donde el ancho y alto se aplican solo al contenido, sin incluir el padding ni el borde. */
+}
+.container{
+    width: 70%;
+    height: 300px;
+    margin: 30px auto;
+    background-color: rgb(100, 100, 250);
+   /* background-image: url(../img/spidy.png), url(../img/sun.png);*/
+   background-image: url(../img/spidy.png);
+   background-repeat: no-repeat;
+   background-position:center ;
+   background-size: contain; /* contain hace que se adapte al tamaño del contenedor sin distorsionarse. */
+   /*background-size: cover; /* cover hace que la imagen cubra todo el contenedor, aunque pueda recortarse. */
+}
+
+.atachment{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/img-hero.png);
+   /* background-attachment: fixed; /* fixed hace que la imagen de fondo permanezca fija en su posición mientras se desplaza el contenido. */
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: cover; 
+}
+.fixed{
+    background-attachment: fixed; /* fixed hace que la imagen de fondo permanezca fija en su posición mientras se desplaza el contenido. */
+
+}
+/*para degradado de colo se usa lo siguiente*/
+
+.degradado{
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to right, red, yellow); /* linear-gradient crea un degradado lineal. En este caso, va de rojo a amarillo de izquierda a derecha. */
+    background-image: linear-gradient(red 30% steelblue 70%); /* Este degradado va de rojo a steelblue, con el rojo ocupando el 30% del espacio y el steelblue el 70%. */
+}
+
+.header{
+    padding: 0.1 px;
+    height: 650px;
+    background-image:linear-gradient(  #fa20364e , #4886f28f), url(../img/hero.jpg); /* linear-gradient crea un degradado lineal. En este caso, va de rojo a amarillo desde el centro hacia afuera. */
+    background-image: linear-gradient(120deg, #a6c0fe7e 0%, #f680848f 100%), url(../img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.box1{
+   background: steelblue;
+   border: 1px solid black;
+   margin:50px 30px 25px 30px;
+}
+
+.box2{
+    padding: 20px;
+    background: #7b1b8e;
+    margin-top: 30px;
+    overflow: hidden;/* overflow: hidden; oculta cualquier contenido que se desborde del contenedor. */
+    border: 2px solid black;
+}
+
+.box{
+    background: red;
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 40px;
+   /* border: 10px dashed brown;*/
+   /*border-width: top 10px right 20px bottom 30px left 40px;
+   border-style: dashed;
+   border-color: brown;*/
+   /*border-top: 10px dashed blue;
+   border-right: 10px solid green;
+   border-bottom: 10px dotted orange;*/
+   border-top-width: 20px ;
+   border-top-style: double;
+   border-top-color: blue;
+
+   border-right-width: 30px;
+   border-right-style: dashed;
+   border-right-color: white;
+
+    border-bottom-width: 40px;
+    border-bottom-style: dotted;
+    border-bottom-color: orange;
+
+    border-left-width: 50px;
+    border-left-style: solid;
+    border-left-color: green;
+}
+
+.img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* object-fit: cover; hace que la imagen se recorte para llenar completamente el contenedor sin distorsionarse. */
+    margin: 20px auto;
+    border-radius: 50%; /* border-radius: 50%; hace que la imagen tenga bordes redondeados, convirtiéndola en un círculo si el ancho y alto son iguales. */
+    border-top-left-radius: 50px; /* border-top-left-radius: 50px; redondea solo la esquina superior izquierda de la imagen con un radio de 50px. */    
+    border-top-right-radius: 20px; /* border-top-right-radius: 20px; redondea solo la esquina superior derecha de la imagen con un radio de 20px. */
+     border-bottom-right-radius: 50px; /* border-bottom-right-radius: 50px; redondea solo la esquina inferior derecha de la imagen con un radio de 50px. */
+     border-bottom-left-radius: 20px; /* border-bottom-left-radius: 20px; redondea solo la esquina inferior izquierda de la imagen con un radio de 20px. */
+}

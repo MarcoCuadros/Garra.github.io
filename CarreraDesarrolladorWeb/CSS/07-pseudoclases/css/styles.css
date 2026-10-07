@@ -1,0 +1,73 @@
+*{
+    font-family: Arial, Helvetica, sans-serif ;
+}
+ul li{
+    font-size: 20px;
+}
+a img{
+    width: 30px;
+    height: 30px;
+}
+/*Aplicar una pseudoclase*/
+ul li:first-child{
+    color: red;
+    font-weight: bold;
+}
+ul li:nth-child(2){
+    color: blue;
+    font-weight: bold;
+}
+ul li:last-child{
+    color: green;
+    font-weight: bold;
+}
+
+#mi-enlace{
+    font-size: 30px;
+    color: rebeccapurple;
+}
+#mi-enlace:link{
+    color: green ;
+}
+#mi-enlace:visited{
+    color: pink ;
+}
+.nav_links{
+    background: red;
+}
+/*evento target*/
+.nav_links:target{
+    background: blue;
+}
+/*root la raiz del documento es mas especifico que html{}*/
+:root{
+    --blue:blue;
+}
+h1{
+    color: var(--blue);
+}
+
+/* pseudoelementos se señala con :: por ejemplo p:: selection que la etiqueta p si la pintamos con el mause 
+haria tal cosa. tambien esta el :: first-line seria la primer linea del parrafo*/
+p::selection{
+    background-color: blueviolet;
+}
+p::first-line{
+    font-weight: bold;
+}
+
+p::first-letter{
+    font-size: 2em;
+    font-weight: bold;
+}
+input[type="text"]::placeholder{
+    color: red;
+}
+p::before{
+    content: ''; 
+    background-image: url(../images/ham.png);
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 0px;
+}

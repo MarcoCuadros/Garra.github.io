@@ -1,0 +1,145 @@
+/*
+1:crear un documento html y vincularlo a css
+2.crear una estructura basica de html que cuente con un contenedor general, 
+cabecera, menu, seccion de contenido principal, barra lateral, elementos dentro del contenedor principal, y el footer.
+
+3. todo el contenido debe estar dentro del contenedor general y su ancho debera ser de 1200 px y estar centrado.
+4.header debe ocupar el 100 porciento del ancho y tener un texto grande y centrado.
+5.menu debe tener los elementos uno al lado del otro.
+6. el contenido principal debe tener un ancho del 70%
+7. el contenido dentro de las contenedor principal debe ser una cuadricula con 4 lineas de 2 cajas
+8. la barea lateral debe tener un ancho de 30% 
+9. el footer debe ocupar un ancho del 100% del div que lo contiene y estar debajo del otro.
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#general{
+    width: 95%;
+    margin: 0 auto;
+   /* margin-top: 20px;*/
+   border: 1px solid black;
+}
+#header{
+    width: 100%;
+    height: 100px;
+    background: lightblue;
+    text-align: center;
+    line-height: 90px;
+}
+#menu{
+    background: #eeeeee;
+}
+#menu ul li{
+    /*display: inline-block; /*para colocar los elementos uno al lado del otro*/
+    /*padding: 10px 20px;*/
+    display: block;
+    float: left;
+    border-right: 1px solid black;
+
+}
+#menu ul li a{
+    display: block;
+    padding: 15px;     
+    color: lightslategray;
+}
+/*cuando paso por el elemento la propiedad hover cambiara el efecto*/
+#menu ul li:hover{/*con esto cambiamos el fondo al pasar el mouse por encima*/
+    background: blue;
+    cursor: pointer;
+}
+#menu ul li:hover a{ /*con esto cambiamos el color del texto al pasar el mouse por encima*/
+    color: white;
+}
+.clearfix{
+    float: none;/*con esto se limpia el float para que el siguiente elemento no se vea afectado por el float*/
+    clear: both; /*con esto se limpia el float para que el siguiente elemento no se vea afectado por el float*/
+}
+
+#contenido{
+    width: 69%;
+    float: left;
+}
+
+#lateral{
+    width: 30%;
+    float: left;
+    border: 1px solid black;
+    min-height: 500px;
+    max-height: 650px;
+    text-align: justify;
+    overflow: scroll;
+}
+
+#contenido h1{
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    color: #444444;
+    text-shadow: 1px 5px 2px gray;/*con esto se agrega una sombra al texto 1 px es para el desplazamiento, 5 px para la blur y 2 px para la transparencia*/
+}
+
+#contenido .caja{
+    width: 40%;
+    height: 250px;
+    background-color: #ccc;
+    margin: 20px;
+    float: left;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 250px;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 10px gray; /*con esto se agrega una sombra a la caja 1 px es para el desplazamiento, 5 px para la blur y 2 px para la transparencia*/
+    border-radius: 30px;
+}
+
+.sombra-interior{
+    box-shadow: 5px 5px 10px inset gray !important; /*con esto se agrega una sombra interior a la caja 1 px es para el desplazamiento, 5 px para la blur y 2 px para la transparencia*/
+}
+
+#footer{
+    width: 100%;
+    height: 55px;
+    background: lightblue;
+    text-align: center;
+    line-height: 55px;
+}
+.libre{
+    position: absolute;/*con esto se posiciona el elemento de forma absoluta, es decir, se posiciona en relación al primer elemento padre que tenga una posición relativa o absoluta, si no hay ningún elemento padre con posición relativa o absoluta, se posiciona en relación al body*/
+    top: 300px; /*con esto se desplaza el elemento hacia abajo 300 px*/
+    left: 50%;
+    border-color: 1px solid black;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}
+.libre1{
+    z-index: 1; /*con esto se establece el orden de apilamiento del elemento, el elemento con un z-index mayor se mostrará por encima de los elementos con un z-index menor*/
+
+}
+
+.libre2{
+    background-color: green;
+    top: 280px;
+    z-index: 2; /*con esto se establece el orden de apilamiento del elemento, el elemento con un z-index mayor se mostrará por encima de los elementos con un z-index menor*/
+}
+
+.fija{
+    position: fixed; /*con esto se posiciona el elemento de forma fija, es decir, se posiciona en relación a la ventana del navegador, por lo que siempre estará visible aunque se desplace la página*/
+    top: 10px; /*con esto se desplaza el elemento hacia abajo 10 px*/
+    left: 0%;
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 13px;
+}

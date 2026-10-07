@@ -1,0 +1,39 @@
+
+h1{
+    color: blue;
+    font-family: monospace;
+    font-weight: bold;/*van del 100 al 900 bold es 700 y normal a 400*/   
+}
+
+.container{
+    background-color: #4caf4f;
+    background-color: rgb(179,89 , 176);
+    /*filter: blur(2px);*/
+    /*brightness(%):
+    ajusta el brillo del elemento. un valor de 100% mantien el 
+    brillo original, valores mayores amentan el brillo y valores menores
+    lo disminuyen.*/
+    /*filter: brightness(200%);*/
+    /*contrast(%):display: cambia el contraste de elemento.
+    100% es el valor predeterminado;*/
+    /*filter: contrast(200%);*/
+    /*grayscale(%):convierte el elemento a escala de grises. 100% es completamente
+     gris y 0% es el valor original.*/
+    /*filter: grayscale(100%);*/
+    /*hue-rotate(deg): cambia el matiz del elemento.
+     0deg es el valor original*/
+   /*  filter: hue-rotate(90deg);*/ /*se pueden usar numeros negativos*/
+    /*invert(%): invierte el elemento. 100% es completamente invertido y 0% es el valor original.*/
+   /*  filter: invert(100%);*/
+    /*opacity(%): ajusta la opacidad del elemento. 100% es el valor original y 0% es completamente transparente.*/
+    /* filter: opacity(50%); */
+    /*saturate(%): ajusta la saturación del elemento. 100% es el valor original, valores mayores aumentan la saturación y valores menores la disminuyen.*/
+    /* filter: saturate(200%); */
+    /*sepia(%): aplica un efecto sepia al elemento. 100% es completamente sepia y 0% es el valor original.*/
+    /* filter: sepia(100%); */
+    /*drop-shadow(offset-x offset-y blur-radius color): aplica una sombra al elemento. */
+    /* filter: drop-shadow(10px 10px 2px black); */
+    /*se pueden convinar varios filtros en uno solo, separandolos por espacios*/
+    /* filter: blur(2px) brightness(200%) contrast(200%) grayscale(100%) hue-rotate(90deg) invert(100%) opacity(50%) saturate(200%) sepia(100%) drop-shadow(10px 10px 2px black); */
+}
+

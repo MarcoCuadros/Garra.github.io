@@ -1,0 +1,130 @@
+/* selectores*/
+/* selector universal */
+*{
+    font-family: tahoma, Arial, verdana, sans-serif;
+}
+/* selector de tipo etiqueta */
+h1{
+    background-color: lightblue;
+    color: white;
+    padding: 10px;
+}
+/*p{
+    background-color: lightgreen;
+    color: black;
+}*/
+
+a{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+footer a {
+    color: rgb(111, 247, 7);
+    text-align: center;
+    padding: 10px;
+}
+
+/*selector de id*/
+
+#descripcion{
+    border: 2px solid black;
+     padding: 15px;
+     background-color: rgb(57, 134, 36);
+     color: black;
+     padding: 10px;
+}
+
+#titulo{
+    color: blue;
+    border: 2px dashed black;
+}
+
+/* selector de clase */
+
+.parrafo2{
+    font-style: italic; /* la propiedad font-style se utiliza para aplicar un estilo de fuente
+     específico a un elemento, como cursiva o normal. */
+    font-weight: bold; /* la propiedad font-weight se utiliza para controlar el grosor de la fuente,
+     permitiendo que el texto sea más grueso o más delgado. */
+}
+
+.parrafo1, .parrafo3 {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 10px;
+}
+
+.parrafo3{
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+}
+
+/* selector de atributo */
+
+#usuario form{
+border: 5px solid blue;
+margin-top: 15px;
+margin-bottom: 15px;
+padding: 20px;
+}
+
+#usuario form *{ /* el asterisco (*) se utiliza como un selector universal para seleccionar todos los elementos dentro del formulario. */
+    display: block; /*cada elemento ocupa toda la línea disponible, lo que hace que cada elemento se muestre en una nueva línea. */
+}
+
+/* con esto ^ le digo los elementos que al principio tengan www*/
+
+a[href^="www"]{
+    color: yellow;
+    font-size: 20px;
+}
+
+a[href$=".com"]{ /* el signo de dólar ($) se utiliza para seleccionar elementos cuyo atributo href termina con ".com". */
+    color: purple;
+}
+
+a[href*="Marcoweb"]{ /* el asterisco (*) se utiliza para seleccionar elementos cuyo atributo href contiene la palabra "marco" en cualquier parte de su valor. */
+    color: blue;
+}
+
+input[type="text"]{ /* el selector de atributo input[type="text"] se utiliza para seleccionar todos los elementos de entrada (input) que tienen un atributo type con el valor "text". */
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 300px;
+
+}
+
+input[type="submit"]{
+    background-color: green;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+/*selector hijo*/
+
+#menu>li>a{ /* el selector de hijo directo (>) se utiliza para seleccionar elementos que son hijos directos de un elemento específico. En este caso, selecciona los enlaces (a) que son hijos directos de los elementos de lista (li) dentro del elemento con el id "menu". */
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/*prioridad de los selectores*/
+
+/* css le da prioridad al ultimo pero por ejemplo si un elemento tiene un id y una clase, el selector de id tendrá mayor
+ prioridad que el selector de clase. */
+ /*pero si le pongo un !important vale sobre cualquier otro selector, incluso sobre el selector de id. */
+
+ #saludo h1{
+    background-color: brown;
+ }
+
+ h1{
+    background-color: purple !important;
+ }

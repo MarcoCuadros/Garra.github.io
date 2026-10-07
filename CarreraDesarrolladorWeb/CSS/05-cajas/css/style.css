@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    padding: 40px;
+}
+
+#cajas{
+    max-width: 1035px;
+    border: 1px solid #000;
+}
+/*El id no se puede repetir si hay 2 elementos con el mismo id solo tomara el primero 
+y la clase si se puede repetir para varios elementos*/
+.caja{
+    width: 250px;
+    height: 250px;
+    background-color: lightblue;
+    border: 10px solid #000;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    padding: 20px;
+    padding-bottom: 34px;
+    display: block;/*con display block el elemento se muestra como un bloque, ocupando todo el ancho disponible y comenzando en una nueva línea*/
+    float: left;/*se usa con display, con float left el elemento se alinea a la izquierda y permite que otros elementos floten a su alrededor*/
+}
+.caja p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 200px;
+}
+
+.clearfix{ /*la clase clearfix se utiliza para solucionar problemas de colapso de contenedores cuando se utilizan elementos flotantes dentro de ellos. Al aplicar esta clase a un contenedor, se asegura de que el contenedor se expanda para contener los elementos flotantes, evitando así que el diseño se rompa o que el contenedor colapse.*/
+    float: none;
+    clear: both;
+}
+
