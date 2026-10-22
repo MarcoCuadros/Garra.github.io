@@ -2738,3 +2738,233 @@ CATALOGO
     }
 
 }
+/* ==========================================
+   CONTACTO GARRA
+========================================== */
+
+.contacto-section {
+    position: relative;
+    padding: 130px 0;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(91,24,201,.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(240,20,34,.12),
+            transparent 35%
+        ),
+        #050505;
+}
+
+.contacto-small {
+    display: block;
+    margin-bottom: 15px;
+
+    color: #999;
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.contacto-title {
+    margin-bottom: 30px;
+
+    color: white;
+    font-size: clamp(3.5rem, 6vw, 6.5rem);
+    font-weight: 950;
+    line-height: .85;
+    letter-spacing: -4px;
+}
+
+.contacto-title span {
+    display: block;
+    color: var(--garra-red);
+
+    text-shadow:
+        5px 5px 0 var(--garra-purple);
+}
+
+.contacto-description {
+    max-width: 450px;
+    margin-bottom: 40px;
+
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.contacto-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contacto-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.contacto-detail-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+
+    background: var(--garra-red);
+    color: white;
+    font-size: 1.3rem;
+
+    transform: rotate(-5deg);
+
+    box-shadow:
+        4px 4px 0 var(--garra-purple);
+}
+
+.contacto-detail strong {
+    color: white;
+    font-size: .85rem;
+    letter-spacing: 1px;
+}
+
+.contacto-detail p {
+    margin: 5px 0 0;
+    color: #888;
+    font-size: .85rem;
+}
+/*---------------------------------------
+        Formulario
+---------------------------------------*/
+.contacto-form-wrapper {
+    position: relative;
+    padding: 50px;
+
+    background:
+        linear-gradient(145deg, #141414, #090909);
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    box-shadow:
+        12px 12px 0 rgba(91,24,201,.35);
+}
+
+.form-decoration {
+    display: block;
+    margin-bottom: 12px;
+
+    color: var(--garra-red);
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.contacto-form-wrapper h3 {
+    margin-bottom: 35px;
+
+    color: white;
+    font-size: 2rem;
+    font-weight: 950;
+    letter-spacing: -1px;
+}
+
+.contacto-form-wrapper label {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #bbb;
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.contacto-form-wrapper input,
+.contacto-form-wrapper select,
+.contacto-form-wrapper textarea {
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 0;
+
+    background: #080808;
+    color: white;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition: border-color .25s ease;
+}
+
+.contacto-form-wrapper input:focus,
+.contacto-form-wrapper select:focus,
+.contacto-form-wrapper textarea:focus {
+    border-color: var(--garra-red);
+}
+
+.contacto-form-wrapper input::placeholder,
+.contacto-form-wrapper textarea::placeholder {
+    color: #666;
+}
+
+.contacto-form-wrapper select option {
+    background: #080808;
+    color: white;
+}
+
+.contacto-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-top: 15px;
+    padding: 18px 25px;
+
+    border: 0;
+
+    background: var(--garra-red);
+    color: white;
+
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    box-shadow:
+        6px 6px 0 var(--garra-purple);
+
+    transition: .25s ease;
+}
+
+.contacto-submit span {
+    font-size: 1.5rem;
+}
+
+.contacto-submit:hover {
+    transform: translate(-3px, -3px);
+
+    box-shadow:
+        10px 10px 0 var(--garra-purple);
+}
+
+@media (max-width: 991px) {
+    .contacto-section {
+        padding: 85px 0;
+    }
+
+    .contacto-form-wrapper {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contacto-title {
+        font-size: 3.6rem;
+    }
+}

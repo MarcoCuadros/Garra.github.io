@@ -1061,6 +1061,168 @@
 
 </section>
 
+<!--+++++++++++++++++++++++++++++++++++++++++ contacto +++++++++++++++++++++++++++++++++++++++++-->
+<section class="contacto-section" id="contacto">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- INFORMACIÓN -->
+            <div class="col-lg-5">
+
+                <div class="contacto-info">
+
+                    <span class="contacto-small">
+                        HABLEMOS DE TU PRÓXIMA GARRA
+                    </span>
+
+                    <h2 class="contacto-title">
+                        ¿TIENES
+                        <span>UNA IDEA?</span>
+                    </h2>
+
+                    <p class="contacto-description">
+                        Ya sea que quieras una playera de nuestro
+                        catálogo, un diseño personalizado o un pedido
+                        especial, estamos listos para escucharte.
+                    </p>
+
+                    <div class="contacto-details">
+
+                        <div class="contacto-detail">
+                            <span class="contacto-detail-icon">✦</span>
+                            <div>
+                                <strong>DISEÑOS PERSONALIZADOS</strong>
+                                <p>Hacemos realidad tus ideas.</p>
+                            </div>
+                        </div>
+
+                        <div class="contacto-detail">
+                            <span class="contacto-detail-icon">✦</span>
+                            <div>
+                                <strong>ATENCIÓN DIRECTA</strong>
+                                <p>Hablemos por WhatsApp.</p>
+                            </div>
+                        </div>
+
+                        <div class="contacto-detail">
+                            <span class="contacto-detail-icon">✦</span>
+                            <div>
+                                <strong>PEDIDOS ESPECIALES</strong>
+                                <p>Cuéntanos qué necesitas.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORMULARIO -->
+            <div class="col-lg-7">
+
+                <div class="contacto-form-wrapper">
+
+                    <span class="form-decoration">
+                        TU PRÓXIMA GARRA EMPIEZA AQUÍ
+                    </span>
+
+                    <h3>CUÉNTANOS TU IDEA</h3>
+
+                    <form id="formContacto">
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label for="contactoNombre">
+                                    TU NOMBRE
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactoNombre"
+                                    placeholder="¿Cómo te llamas?"
+                                    required
+                                >
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="contactoTelefono">
+                                    TU TELÉFONO
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="contactoTelefono"
+                                    placeholder="Tu número"
+                                    required
+                                >
+                            </div>
+
+                            <div class="col-12">
+                                <label for="contactoTipo">
+                                    ¿QUÉ NECESITAS?
+                                </label>
+
+                                <select id="contactoTipo" required>
+                                    <option value="">
+                                        Selecciona una opción
+                                    </option>
+                                    <option value="Playera del catálogo">
+                                        Playera del catálogo
+                                    </option>
+                                    <option value="Diseño personalizado">
+                                        Diseño personalizado
+                                    </option>
+                                    <option value="Pedido para grupo">
+                                        Pedido para grupo
+                                    </option>
+                                    <option value="Otro">
+                                        Otro
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="contactoMensaje">
+                                    CUÉNTANOS MÁS
+                                </label>
+
+                                <textarea
+                                    id="contactoMensaje"
+                                    rows="5"
+                                    placeholder="Describe tu idea..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <button
+                                    type="submit"
+                                    class="contacto-submit"
+                                >
+                                    ENVIAR POR WHATSAPP
+                                    <span>↗</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
     <script>const navbar = document.querySelector('.garra-navbar');
     window.addEventListener('scroll', function () {
         if (window.scrollY > 40) {
@@ -1229,6 +1391,43 @@ Color: ${color}
             url,
             '_blank'
         );
+    });
+</script>
+<script>
+document.getElementById('formContacto')
+    .addEventListener('submit', function(event) {
+
+        event.preventDefault();
+
+        const nombre =
+            document.getElementById('contactoNombre').value.trim();
+
+        const telefonoCliente =
+            document.getElementById('contactoTelefono').value.trim();
+
+        const tipo =
+            document.getElementById('contactoTipo').value;
+
+        const descripcion =
+            document.getElementById('contactoMensaje').value.trim();
+
+        const mensaje = `Hola GARRA, quiero información sobre un pedido.
+
+Nombre: ${nombre}
+Teléfono: ${telefonoCliente}
+Tipo de pedido: ${tipo}
+
+Mi idea:
+${descripcion}`;
+
+        // REEMPLAZA CON TU NÚMERO DE WHATSAPP
+        const telefonoGarra = '527122970312';
+
+        const url =
+            `https://wa.me/${telefonoGarra}?text=${encodeURIComponent(mensaje)}`;
+
+        window.open(url, '_blank', 'noopener,noreferrer');
+
     });
 </script>
 </body>
